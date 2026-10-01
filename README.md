@@ -83,7 +83,7 @@ The tree converges to the reference value as N grows, and the Monte-Carlo estima
 ## Getting started
 
 ```bash
-git clone https://github.com/<your-username>/actuarial-liabilities-valuation.git
+git clone https://github.com/alexisthieltgen/actuarial-liabilities-valuation.git
 cd actuarial-liabilities-valuation
 pip install -r requirements.txt
 
