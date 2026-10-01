@@ -88,7 +88,9 @@ cd actuarial-liabilities-valuation
 pip install -r requirements.txt
 
 # Part 1 – replicate all figures of the report
-cd part1_yield_curve_bonds && python replicate_in_python.py && cd ..
+cd part1_yield_curve_bonds
+python replicate_in_python.py
+cd ..
 
 # Part 2 – run convergence experiments (~30 s) and regenerate figures
 cd part2_participating_annuity
