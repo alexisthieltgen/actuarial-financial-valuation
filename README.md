@@ -102,4 +102,4 @@ Python (NumPy, SciPy, Matplotlib), Excel (financial functions, Solver), Black-Sc
 
 ## Author
 
-**Alexis Thieltgen** — Applied Mathematics Engineer (UCLouvain & KTH) · [LinkedIn](https://www.linkedin.com/in/alexisthieltgen) · alexis.thieltgen@gmail.com
+**Alexis Thieltgen** — Applied Mathematics Engineer (UCLouvain & KTH) · [LinkedIn](https://www.linkedin.com/in/alexis-thieltgen-1b0210359/) · alexis.thieltgen@gmail.com
