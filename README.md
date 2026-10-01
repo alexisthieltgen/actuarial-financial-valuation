@@ -73,10 +73,11 @@ The tree converges to the reference value as N grows, and the Monte-Carlo estima
 │   ├── data/liabilities_cashflows.xlsx              # forecast liability cash flows (provided dataset)
 │   └── figures/
 └── part2_participating_annuity/
-    ├── conftest.py
-    ├── src/pricing.py                               # analytical, binomial tree, Monte-Carlo
-    ├── scripts/run_experiments.py                   # convergence studies + figures
-    ├── tests/test_pricing.py                        # regression tests vs. report values
+    ├── binomial_tree.py                             # Binomial tree model implementation for pricing the participating annuity
+    ├── binomial_tree_convergence.pya                # Script for analyzing and plotting the convergence of binomial tree prices
+    ├── monte_carlo.py                               # Monte Carlo simulation for the stochastic valuation of the insurance contract
+    ├── monte_carlo_convergence.py                   # Convergence and standard deviation analysis for the Monte Carlo simulations
+    ├── numerical_value.py                           # Computation of the reference theoretical (analytical) value using Black-Scholes formulas
     └── figures/
 ```
 
@@ -87,15 +88,16 @@ git clone https://github.com/alexisthieltgen/actuarial-liabilities-valuation.git
 cd actuarial-liabilities-valuation
 pip install -r requirements.txt
 
-# Part 1 – replicate all figures of the report
+# Part 1 - Retrieve values from xlsx files
 cd part1_yield_curve_bonds
 python replicate_in_python.py
 cd ..
 
-# Part 2 – run convergence experiments (~30 s) and regenerate figures
+# Part 2 – Generate figures as in the report
 cd part2_participating_annuity
-python scripts/run_experiments.py
-pytest
+python monte_carlo_convergence.py
+python binomial_tree_convergence.py
+cd ..
 ```
 
 ## Tech stack
